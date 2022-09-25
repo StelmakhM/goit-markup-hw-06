@@ -820,6 +820,8 @@ button {
 
 .form-field {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-title {
@@ -827,7 +829,7 @@ button {
     font-size: 20px;
     line-height: calc(23/20);
     text-align: center;
-    letter-spacing: 0.03 em;
+    letter-spacing: 0.03em;
     color: var(--main-color);
     margin-bottom: 12px;
 }
@@ -851,6 +853,7 @@ button {
 
 
 .form-input {
+    display: inline-block;
     margin-bottom: 10px;
     width: 448px;
     height: 40px;
@@ -978,6 +981,12 @@ button {
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color var(--cubic) 250ms;
+}
+
+.form-textarea:focus {
+    border-color: var(--hover-color);
+    outline: none;
 }
 
 .form-textarea::placeholder {
