@@ -708,6 +708,7 @@ button {
 
 .footer-social {
     margin-left: 70px;
+    margin-right: 93px;
 
 }
 
@@ -755,7 +756,85 @@ button {
 }
 
 
+.subscribe-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accessory-color);
+}
+
+.subscribe-input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--background-color);
+    padding-left: 16px;
+    margin-right: 12px;
+}
+
+.subscribe-input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-button {
+    display: inline-flex;
+
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 28px;
+    border: transparent;
+    width: 200px;
+
+}
+
+.subscribe-button strong::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+
+    transform: translate();
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/send.svg);
+}
+
+.subscribe-button strong {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--accessory-color);
+}
+
+.subscribe-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+
+
 /* Modal */
+
 
 
 .backdrop {
@@ -843,6 +922,8 @@ button {
 
 .form-label {
     display: inline-block;
+    margin: 0;
+    padding: 0;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(14/12);
@@ -854,6 +935,8 @@ button {
 
 .form-input {
     display: inline-block;
+    margin: 0;
+    padding: 0;
     margin-bottom: 10px;
     width: 448px;
     height: 40px;
