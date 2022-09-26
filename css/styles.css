@@ -807,20 +807,6 @@ button {
     background-color: var(--buttons-hover-color);
 }
 
-.subscribe-button strong::after {
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 10px);
-    transform: translateY(-50%);
-
-    transform: translate();
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/send.svg);
-}
-
 .subscribe-button strong {
     position: relative;
     font-weight: 700;
@@ -829,6 +815,19 @@ button {
     letter-spacing: 0.06em;
     color: var(--accessory-color);
 }
+
+.subscribe-button strong::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/send.svg);
+}
+
 
 .subscribe-icon {
     display: inline-block;
@@ -902,10 +901,11 @@ button {
     height: 18px;
 }
 
-.form-field {
-    margin-bottom: 20px;
+.form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 40px;
 }
 
 .form-title {
@@ -918,15 +918,12 @@ button {
     margin-bottom: 12px;
 }
 
-.modal form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
+.form-wrap {
+    position: relative;
 }
 
 .form-label {
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -937,9 +934,8 @@ button {
     margin-bottom: 4px;
 }
 
-
 .form-input {
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
@@ -961,11 +957,36 @@ button {
     fill: var(--hover-color);
 }
 
-.modal-agreement {
-    margin-bottom: 30px;
+.form-textarea {
+    display: block;
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color var(--cubic) 250ms;
+}
+
+.form-textarea:focus {
+    border-color: var(--hover-color);
+    outline: none;
+}
+
+.form-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .form-agreement {
+    margin-bottom: 30px;
+}
+
+.label-agreement {
     position: relative;
     font-weight: 400;
     line-height: 1.71;
@@ -974,10 +995,9 @@ button {
     cursor: pointer;
 }
 
-.form-agreement a {
+.label-agreement a {
     color: var(--hover-color)
 }
-
 
 .form-icon {
     position: absolute;
@@ -988,14 +1008,9 @@ button {
     height: 18px;
     fill: currentColor;
     transition: fill var(--cubic) 250ms;
-
 }
 
-.form-wrap {
-    position: relative;
-}
-
-.form-agreement::before {
+.label-agreement::before {
     position: absolute;
     top: 0;
     left: -7px;
@@ -1009,7 +1024,7 @@ button {
     transition: background-image var(--cubic) 250ms;
 }
 
-.checkbox-agreement:checked+.form-agreement::before {
+.checkbox-agreement:checked+.label-agreement::before {
     background-image: url(../images/checkboxed.svg);
 }
 
@@ -1053,29 +1068,4 @@ button {
 .modal-submit-button:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: var(--buttons-hover-color);
-}
-
-
-.form-textarea {
-    width: 448px;
-    height: 120px;
-    padding: 12px 16px;
-    resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    transition: border-color var(--cubic) 250ms;
-}
-
-.form-textarea:focus {
-    border-color: var(--hover-color);
-    outline: none;
-}
-
-.form-textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-
 }
